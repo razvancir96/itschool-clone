@@ -1,0 +1,249 @@
+/* Adaugam varaibile */
+:root {
+    --text-primary: #101d42;
+    --text-secondary: #fbb44c;
+    --text-dark: #2b2922;
+    --text-light: #eaeaea;
+
+    --bg-primary: #141e4c;
+    --bg-secondary: #dfedf5;
+    --bg-dark: #101d42;
+    --bg-light: #ffffff;
+
+    --button-color: #2bb686;
+
+    --fs-large: 1rem;
+    --fs-medium: 0.875rem;
+    --fs-small: 0.75rem;
+
+    --spacing-xl: 2.625rem;
+    --spacing-large: 1.75rem;
+    --spacing-medium: 1rem;
+    --spacing-small: 0.5rem;
+    --spacing-tiny: 0.25rem;
+
+    --mobile-logo-height: 45px;
+}
+
+/* Resetam proprietatile default */
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+}
+
+/* Adaugam proprietati legate de font */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    font-size: 3.5rem
+}
+
+h2 {
+    font-size: 1.75rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: var(--fs-medium);
+}
+
+/* Adaugam proprietati legate de culori */
+h1 {
+    color: var(--text-light);
+}
+
+h2 {
+    color: var(--text-primary);
+}
+
+h3 {
+    color: var(--text-secondary);
+}
+
+p {
+    color: var(--text-dark);
+}
+
+/* Clase reutilizabile */
+.container {
+    max-width: 1200px;
+    min-width: 320px;
+
+    margin: auto;
+}
+
+/* Stilizeara nav-ului */
+nav {
+    position: fixed;
+    top: 0;
+
+    width: 100vw;
+
+    background-color: var(--bg-primary);
+
+    z-index: 1;
+}
+
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: var(--spacing-small);
+}
+
+nav img {
+    width: auto;
+    height: 60px;
+}
+
+/* Meniul si checkbox-ul sunt necesare doar pentru versiunea de mobile. */
+nav .menu-icon {
+    color: var(--text-light);
+    display: none;
+}
+
+nav input[type="checkbox"] {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav li {
+    position: relative;
+}
+
+nav a {
+    font-size: var(--fs-small);
+    /* Transformam textul sa contina doar majuscule.*/
+    text-transform: uppercase;
+
+    color: var(--text-light);
+
+    padding: var(--spacing-medium);
+}
+
+nav .arrow-down-icon {
+    font-size: var(--fs-large);
+
+    /* Daca nu specificam top, left, right sau bottom, elementul va fi pozitionat automat, iar in acest caz il pozitioneaza fix cum trebuie. */
+    position: absolute;
+}
+
+nav a:hover {
+    color: var(--text-secondary);
+}
+
+nav .submenu {
+    /* Initial, submeniul nu este afisat. Afisarea sa se face la hover pe parinte. */
+    display: none;
+
+    position: absolute;
+    top: calc(100% - var(--spacing-small));
+    left: var(--spacing-medium);
+
+    width: 10rem;
+    padding: var(--spacing-tiny) 0;
+
+    background-color: var(--bg-dark);
+
+    z-index: 2;
+}
+
+nav .submenu a {
+    padding: var(--spacing-tiny) var(--spacing-small);
+}
+
+/* Atentie la acest selector! display: block se aplica pe elementul cu clasa submenu, doar atunci cand parintele cu clasa about us are hover! */
+nav .about-us:hover .submenu {
+    display: block;
+}
+
+/* Stilizarea pentru mobile */
+@media (max-width: 768px) {
+    nav img {
+        height: var(--mobile-logo-height);
+    }
+
+    /* Ascundem link-urile si afisam iconita de meniu, la pachet cu checkbox-ul.
+    De asemenea, ascundem submeniul (intrucat am avea nevoie de JS ca sa-l facem pe mobil) si iconita ce indica prezenta lui. */
+    nav ul {
+        display: none;
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .arrow-down-icon {
+        display: none;
+    }
+
+    nav .about-us:hover .submenu {
+        display: none;
+    }
+
+    nav .menu-icon-container {
+        position: relative;
+    }
+
+    /* Un nou tip de selector: sleectam input-ul care are ca atribut type="checkbox." */
+    nav input[type="checkbox"] {
+        /* Pe mobil checkbox-ul trebuie sa fie prezent pe ecran. */
+        display: block;
+
+        /* Practic, punem checkbox-ul deasupra iconitei de meniu. */
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        height: 100%;
+        width: 100%;
+
+        /* Atentie, opacity 0 doar ascunde vizual elementul, ele inca este prezent pe ecran.*/
+        opacity: 0;
+
+        margin: 0;
+
+        /* Schimbam afisajul cursorului mouse-ului. */
+        cursor: pointer;
+    }
+
+    /* Doua tipuri noi de selector:
+    1. input:checked => elementul este stilizat doar daca checkbox-ul se afla in starea checked.
+    2. input:checked ~ ul => aplica CSS-ul doar pe FRATII (de acelasi nivel) lui input:checked aflati SUB el ca ordine. Evident, doar fratii care sunt ul. */
+    nav input[type="checkbox"]:checked ~ ul {
+        display: block;
+        width: 100vw;
+
+        /* Cand vrem sa ne pozitionam absolut la viewport, folosim position: fixed. Position: absolute s-ar pozitiona fata de primul element relativ, ceea ce nu ne-ar ajuta. */
+        position: fixed;
+        /* Unde se afiseaza meniul extins pe mobil? Pai imediat sub nav. Cum calculam cat are nav-ul? Dimensiunea logo-ului + padding. */
+        top: calc(var(--mobile-logo-height) + 2 * var(--spacing-small));
+        left: 0;
+
+        background-color: var(--bg-primary);
+    }
+}
