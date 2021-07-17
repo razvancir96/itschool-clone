@@ -1,0 +1,93 @@
+/* Welcome section */
+.welcome {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-primary);
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.welcome h1, .welcome p {
+    color: var(--text-white);
+}
+
+.welcome p {
+    font-size: var(--fs-large);
+    margin-bottom: var(--spacing-medium);
+}
+
+.welcome p:last-of-type {
+    margin-bottom: var(--spacing-xl);
+}
+
+.welcome p span {
+    color: var(--text-secondary);
+}
+
+.welcome img {
+    height: 24px;
+    width: auto;
+
+    margin-left: var(--spacing-medium);
+
+    /* Un bun exemplu de positionare relativa: mutam imaginile mai jos fata de pozitia lor initiala, pentru a arata mai bine. */
+    position: relative;
+    top: var(--spacing-tiny);
+}
+
+.welcome .container {
+    display: flex;
+    flex-direction: column;
+
+    /* Vrem ca al nostru container sa ocupe tot spatiul disponibil. */
+    flex-grow: 1;
+}
+
+.welcome a {
+    color: var(--text-light);
+    background-color: var(--button-color);
+
+    font-size: var(--fs-medium);
+    text-transform: uppercase;
+    text-align: center;
+
+    padding: var(--spacing-medium);
+    border: 2px solid var(--button-color);
+    border-radius: 5px;
+
+    width: 260px;
+}
+
+.welcome a:hover {
+    background-color: transparent;
+}
+
+@media (max-width: 768px) {
+    .welcome h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Vrem ca ultimul paragraf sa nu aiba margine. */
+    .welcome p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .welcome img {
+        display: block;
+        
+        margin-top: var(--spacing-medium);
+        margin-left: var(--spacing-small);
+    }
+
+    .welcome a {
+        /* Asundem butonul pe mobil. */
+        display: none;
+    }
+
+    .welcome {
+        padding-bottom: 4rem;
+    }
+
+}

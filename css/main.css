@@ -4,6 +4,7 @@
     --text-secondary: #fbb44c;
     --text-dark: #2b2922;
     --text-light: #eaeaea;
+    --text-white: #ffffff;
 
     --bg-primary: #141e4c;
     --bg-secondary: #dfedf5;
@@ -90,6 +91,8 @@ p {
     min-width: 320px;
 
     margin: auto;
+
+    padding: var(--spacing-medium);
 }
 
 /* Stilizeara nav-ului */
@@ -108,8 +111,6 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: var(--spacing-small);
 }
 
 nav img {
@@ -244,6 +245,6 @@ nav .about-us:hover .submenu {
         top: calc(var(--mobile-logo-height) + 2 * var(--spacing-small));
         left: 0;
 
-        background-color: var(--bg-primary);
+        background-color: var(--bg-dark);
     }
 }
