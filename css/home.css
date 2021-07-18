@@ -1,7 +1,7 @@
 /* Welcome section */
 .welcome {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-color: var(--bg-primary);
 
     display: flex;
@@ -90,4 +90,153 @@
         padding-bottom: 4rem;
     }
 
+}
+
+/* Couses section */
+.courses h2 {
+    margin: var(--spacing-large) 0;
+    text-align: center;
+}
+
+/* Stilizarea se aplica doar pe un element care are IN ACELASI TIMP clasele container si grid. */
+.courses .container.grid {
+    padding: var(--spacing-medium) var(--spacing-small);
+}
+
+.courses .courses-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: var(--spacing-large);
+}
+
+.courses .course {
+    width: 320px;
+    flex-grow: 1;
+
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: var(--spacing-tiny);
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+}
+
+.courses h3 {
+    color: var(--text-primary);
+    font-weight: 400;
+}
+
+.courses span {
+    font-size: var(--fs-medium);
+    color: var(--text-dark);
+}
+
+.courses .material-icons {
+    /* Veritcal align aliniaza pe vertcala elementele inline. */
+    vertical-align: middle;
+}
+
+.course .date, .courses .place {
+    padding: var(--spacing-tiny);
+}
+
+.courses .place {
+    background-color: var(--text-secondary);
+    margin-left: var(--spacing-tiny);
+}
+
+.courses .course, .courses h3, .courses .badges {
+    margin-bottom: var(--spacing-medium);
+}
+
+.courses .bar {
+    height: var(--spacing-tiny);
+    background-color: var(--button-color);
+    border-radius: 10px;
+}
+
+.courses .content {
+    padding: var(--spacing-medium) var(--spacing-small);
+}
+
+/* Who we are section */
+.who-we-are {
+    background-color: var(--bg-secondary);
+}
+
+.who-we-are .container.grid {
+    padding: var(--spacing-medium) var(--spacing-small);
+}
+
+.who-we-are h2 {
+    padding-top: var(--spacing-large);
+}
+
+.who-we-are h2, .who-we-are p {
+    margin-bottom: var(--spacing-large);
+    text-align: center;
+}
+
+.who-we-are .container.grid p {
+    margin-right: var(--spacing-small);
+    margin-left: var(--spacing-small);
+}
+
+.who-we-are .images-container {
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin-bottom: var(--spacing-large);
+}
+
+.who-we-are img {
+    margin-right: var(--spacing-small);
+    margin-left: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+
+    width: 320px;
+    height: auto;
+    flex-grow: 1;
+}
+
+/* Partners section */
+.partners h2 {
+    padding-top: var(--spacing-large);
+    text-align: center;
+}
+
+.partners h2, .partners .partners-container {
+    margin-bottom: var(--spacing-large);
+}
+
+.partners .partners-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* In cazul partenerilor, nu vrem ca imaginile sa se intinda pe tot randul, deci le spatiem cu justify-content: space-around. */
+    justify-content: space-around;
+
+    margin: 0 var(--spacing-xl);
+}
+
+.partners img {
+    width: 100px;
+    height: auto;
+
+    margin-right: var(--spacing-xl);
+    margin-left: var(--spacing-xl);
+    margin-bottom: var(--spacing-medium);
+
+    /* Facem pozele gri. */
+    filter: grayscale(100%);
+}
+
+.partners img:hover {
+    /* La hover, coloram din nou pozele. */
+    filter: grayscale(0);
+}
+
+@media (max-width: 768px) {
+    .partners .partners-container {
+        margin: 0 var(--spacing-small);
+    }
 }

@@ -95,12 +95,24 @@ p {
     padding: var(--spacing-medium);
 }
 
+/* Layout */
+body {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
 /* Stilizeara nav-ului */
 nav {
     position: fixed;
     top: 0;
 
-    width: 100vw;
+    width: 100%;
 
     background-color: var(--bg-primary);
 
@@ -111,6 +123,10 @@ nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+nav .logo-link {
+    padding: 0;
 }
 
 nav img {
@@ -237,7 +253,7 @@ nav .about-us:hover .submenu {
     2. input:checked ~ ul => aplica CSS-ul doar pe FRATII (de acelasi nivel) lui input:checked aflati SUB el ca ordine. Evident, doar fratii care sunt ul. */
     nav input[type="checkbox"]:checked ~ ul {
         display: block;
-        width: 100vw;
+        width: 100%;
 
         /* Cand vrem sa ne pozitionam absolut la viewport, folosim position: fixed. Position: absolute s-ar pozitiona fata de primul element relativ, ceea ce nu ne-ar ajuta. */
         position: fixed;
@@ -247,4 +263,19 @@ nav .about-us:hover .submenu {
 
         background-color: var(--bg-dark);
     }
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--bg-dark);
+}
+
+footer p {
+    font-size: var(--fs-small);
+    text-align: center;
+
+    color: var(--text-light);
+
+    padding: var(--spacing-medium) 0;
 }
