@@ -1,0 +1,124 @@
+.welcome {
+    background-color: var(--bg-primary);
+    height: 50vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome h1 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .welcome h1 {
+        font-size: 2rem;
+    }
+}
+
+.courses .container.grid {
+    padding: var(--spacing-medium) var(--spacing-small);
+}
+
+.courses .container.grid .main-paragraph {
+    margin-left: var(--spacing-small);
+    margin-right: var(--spacing-small);
+}
+
+.courses h2 {
+    padding-top: var(--spacing-large);
+}
+
+.courses h2, .courses .main-paragraph {
+    text-align: center;
+}
+
+.courses h2, .courses .main-paragraph, .courses .courses-container {
+    margin-bottom: var(--spacing-large);
+}
+
+.courses .courses-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.courses .course-wrapper {
+    width: calc(100% / 3);
+
+    padding-right: var(--spacing-small);
+    padding-left: var(--spacing-small);
+}
+
+.courses .course {
+    width: 100%;
+
+    padding: var(--spacing-tiny);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: var(--spacing-medium)
+}
+
+.courses .presentation-image {
+    width: 100%;
+    height: auto;
+
+    margin-bottom: var(--spacing-large);
+}
+
+.courses h3 {
+    color: var(--text-primary);
+}
+
+.courses .microsoft-logo {
+    width: 100px;
+    height: auto;
+    vertical-align: middle;
+}
+
+.courses span, .courses .certification {
+    font-size: var(--fs-medium);
+    color: #666;
+}
+
+.courses .material-icons {
+    vertical-align: middle;
+}
+
+.courses a {
+    font-size: var(--fs-medium);
+    text-align: center;
+
+    color: var(--text-white);
+    background-color: var(--button-color);
+
+    border: 1px solid var(--button-color);
+    border-radius: 5px;
+    padding: var(--spacing-tiny);
+
+    width: 100px;
+}
+
+.courses h3, .courses .certification, .courses .details, .courses a {
+    margin-bottom: var(--spacing-medium);
+}
+
+.courses .content {
+    padding: 0 var(--spacing-small);
+}
+
+.courses .microsoft-logo, .courses .duration-months, .courses .duration-hours {
+    margin-left: var(--spacing-small);
+}
+
+@media (max-width: 992px) {
+    .courses .course-wrapper {
+        width: 50%
+    }
+}
+
+@media (max-width: 768px) {
+    .courses .course-wrapper {
+        width: 100%
+    }
+}
