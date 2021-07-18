@@ -189,14 +189,18 @@
     margin-bottom: var(--spacing-large);
 }
 
-.who-we-are img {
+.who-we-are .image-wrapper {
+    width: 320px;
+    flex-grow: 1;
+
     margin-right: var(--spacing-small);
     margin-left: var(--spacing-small);
     margin-bottom: var(--spacing-medium);
+}
 
-    width: 320px;
+.who-we-are img {
+    width: 100%;
     height: auto;
-    flex-grow: 1;
 }
 
 /* Partners section */
@@ -218,13 +222,17 @@
     margin: 0 var(--spacing-xl);
 }
 
-.partners img {
+.partners .image-wrapper {
     width: 100px;
-    height: auto;
 
     margin-right: var(--spacing-xl);
     margin-left: var(--spacing-xl);
     margin-bottom: var(--spacing-medium);
+}
+
+.partners img {
+    width: 100%;
+    height: auto;
 
     /* Facem pozele gri. */
     filter: grayscale(100%);
