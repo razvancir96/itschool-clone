@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Includem CSS-urile noastre -->
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/contact.css">
 </head>
 
 <body>
@@ -62,9 +63,79 @@
     </nav>
 
     <main>
-        <div class="container">
-            <h1>Contact IT School</h1>
-        </div>
+        <section class="welcome">
+            <div class="container">
+                <h1>Contact IT School</h1>
+            </div>
+        </section>
+    
+        <section class="contact">
+            <div class="container">
+                <h2>Informații generale</h2>
+                <p class="main-paragraph">Nu ai găsit ce căutai sau te putem ajuta și cu alte informații referitoare la programele de pregătire IT School? Suntem aici să te ajutăm. Îți reamintim că pe pagina FAQ regăsești o listă cu cele mai frecvente întrebări.</p>
+                <p class="main-paragraph">Ne poți găsi la:</p>
+                <div class="contact-wrapper">
+                    <ul>
+                        <li>
+                            <p>
+                                <span class="material-icons">
+                                    phone_iphone
+                                </span>
+                                Mobil:
+                            </p>
+                            <a href="tel:0040737880420">+40 737 880 420</a>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="material-icons">
+                                    email
+                                </span>
+                                E-mail:
+                            </p>
+                            <a href="mailto:office@itschool.ro">office@itschool.ro</a>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="material-icons">
+                                    facebook
+                                </span>
+                                Facebook:
+                            </p>
+                            <a href="https://www.facebook.com/itschool.ro/">/ITSchool</a>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="material-icons">
+                                    schedule
+                                </span>
+                                Program:
+                            </p>
+                            <p class="description">Luni - Vineri, de la 10:00 - 18:00</p>
+                        </li>
+                        <li>
+                            <p>
+                                <span class="material-icons">
+                                    location_on
+                                </span>
+                                Sediu central:
+                            </p>
+                            <p class="description">Timișoara</p>
+                        </li>
+                    </ul>
+                    <form class="contact-form">
+                        <label for="name">Nume Prenume:</label>
+                        <input type="text" placeholder="Ex: Ionescu Ion" id="name">
+                        <label for="email">Adresa de email:</label>
+                        <input type="email" placeholder="Ex: ion.ionescu@gmail.com" id="email">
+                        <label for="phone">Telefon:</label>
+                        <input type="text" placeholder="Ex: 0722 234 567" id="phone">
+                        <label for="message">Masajul tau:</label>
+                        <textarea id="message"></textarea>
+                        <input type="submit" value="Trimite">
+                    </form>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
