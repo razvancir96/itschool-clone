@@ -265,7 +265,7 @@ nav .about-us:hover .submenu {
         /* Cand vrem sa ne pozitionam absolut la viewport, folosim position: fixed. Position: absolute s-ar pozitiona fata de primul element relativ, ceea ce nu ne-ar ajuta. */
         position: fixed;
         /* Unde se afiseaza meniul extins pe mobil? Pai imediat sub nav. Cum calculam cat are nav-ul? Dimensiunea logo-ului + padding. */
-        top: calc(var(--mobile-logo-height) + 2 * var(--spacing-small));
+        top: calc(var(--mobile-logo-height) + 2 * var(--spacing-medium));
         left: 0;
 
         background-color: var(--bg-dark);
