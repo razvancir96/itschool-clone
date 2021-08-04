@@ -47,6 +47,7 @@ a {
     text-decoration: none;
 }
 
+/* Resetam stilurile aduagate by default pe mobile */
 input[type="submit"] {
     -webkit-appearance: none;
     -moz-appearance: none;
