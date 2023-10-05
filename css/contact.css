@@ -1,52 +1,55 @@
 .welcome {
-    background-color: var(--bg-primary);
-    height: 50vh;
+  background-color: var(--bg-primary);
+  height: 50vh;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome h1 {
-    text-align: center;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-    .welcome h1 {
-        font-size: 2rem;
-    }
+  .welcome h1 {
+    font-size: 2rem;
+  }
 }
 
 .contact h2 {
-    text-align: center;
+  text-align: center;
 
-    padding-top: var(--spacing-large);
+  padding-top: var(--spacing-large);
 }
 
-.contact h2, .contact .main-paragraph, .contact .contact-wrapper {
-    margin-bottom: var(--spacing-large);
+.contact h2,
+.contact .main-paragraph,
+.contact .contact-wrapper {
+  margin-bottom: var(--spacing-large);
 }
 
 .contact .contact-wrapper {
-    display: flex;
+  display: flex;
 }
 
-.contact ul, .contact form {
-    width: 50%;
+.contact ul,
+.contact form {
+  width: 50%;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    padding: var(--spacing-medium);
+  padding: var(--spacing-medium);
 }
 
 .contact li {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    padding-bottom: var(--spacing-small);
-    margin-bottom: var(--spacing-large);
-    border-bottom: 1px solid #ddd;
+  padding-bottom: var(--spacing-small);
+  margin-bottom: var(--spacing-large);
+  border-bottom: 1px solid #ddd;
 }
 
 .contact .contact-wrapper p,
@@ -54,83 +57,88 @@
 .contact label,
 .contact input,
 .contact textarea {
-    font-size: var(--fs-medium);
+  font-size: var(--fs-medium);
 }
 
-.contact .material-icons {
-    vertical-align: middle;
-    color: var(--text-primary);
+.contact .material-symbols-outlined {
+  vertical-align: middle;
+  color: var(--text-primary);
 }
 
 .contact .contact-wrapper p:not(.description),
 .contact label,
 .contact input,
 .contact textarea {
-    color: var(--text-dark);
+  color: var(--text-dark);
 }
 
-.contact a, .contact .description, .contact input::placeholder {
-    color: #8e8e8e;
+.contact a,
+.contact .description,
+.contact input::placeholder {
+  color: #8e8e8e;
 }
 
 .contact a:hover {
-    color: var(--text-primary);
+  color: var(--text-primary);
 }
 
 .contact label {
-    margin-bottom: var(--spacing-tiny);
+  margin-bottom: var(--spacing-tiny);
 }
 
-.contact input, .contact textarea {
-    padding: var(--spacing-small);
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: var(--spacing-medium);
+.contact input,
+.contact textarea {
+  padding: var(--spacing-small);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: var(--spacing-medium);
 }
 
-.contact input:focus, .contact textarea:focus {
-    border-color: #8e8e8e;
-    outline: none;
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #8e8e8e;
+  outline: none;
 }
 
 .contact textarea {
-    font-family: inherit;
-    height: 100px;
+  font-family: inherit;
+  height: 100px;
 }
 
 .contact input[type="submit"] {
-    font-size: var(--fs-medium);
-    text-align: center;
+  font-size: var(--fs-medium);
+  text-align: center;
 
-    color: var(--text-white);
-    background-color: var(--button-color);
+  color: var(--text-white);
+  background-color: var(--button-color);
 
-    border: 1px solid var(--button-color);
-    border-radius: 5px;
-    padding: var(--spacing-small);
+  border: 1px solid var(--button-color);
+  border-radius: 5px;
+  padding: var(--spacing-small);
 
-    width: 100px;
+  width: 100px;
 }
 
 @media (max-width: 768px) {
-    .contact .contact-wrapper {
-        flex-direction: column;
-    }
+  .contact .contact-wrapper {
+    flex-direction: column;
+  }
 
-    .contact ul, .contact form {
-        width: 100%;
-        padding: 0;
-    }
+  .contact ul,
+  .contact form {
+    width: 100%;
+    padding: 0;
+  }
 
-    .contact li {
-        margin-bottom: var(--spacing-medium);
-    }
+  .contact li {
+    margin-bottom: var(--spacing-medium);
+  }
 
-    .contact li:last-of-type {
-        margin-bottom: var(--spacing-large);
-    }
+  .contact li:last-of-type {
+    margin-bottom: var(--spacing-large);
+  }
 
-    .contact input[type="submit"] {
-        margin-bottom: 0;
-    }
+  .contact input[type="submit"] {
+    margin-bottom: 0;
+  }
 }

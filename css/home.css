@@ -1,284 +1,289 @@
 /* Welcome section */
 .welcome {
-    height: 100vh;
-    width: 100%;
-    background-color: var(--bg-primary);
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-primary);
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
-.welcome h1, .welcome p {
-    color: var(--text-white);
+.welcome h1,
+.welcome p {
+  color: var(--text-white);
 }
 
 .welcome p {
-    font-size: var(--fs-large);
-    margin-bottom: var(--spacing-medium);
+  font-size: var(--fs-large);
+  margin-bottom: var(--spacing-medium);
 }
 
 .welcome p:last-of-type {
-    margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
 }
 
 .welcome p span {
-    color: var(--text-secondary);
+  color: var(--text-secondary);
 }
 
 .welcome img {
-    height: 24px;
-    width: auto;
+  height: 24px;
+  width: auto;
 
-    margin-left: var(--spacing-medium);
+  margin-left: var(--spacing-medium);
 
-    /* Un bun exemplu de positionare relativa: mutam imaginile mai jos fata de pozitia lor initiala, pentru a arata mai bine. */
-    position: relative;
-    top: var(--spacing-tiny);
+  /* Un bun exemplu de positionare relativa: mutam imaginile mai jos fata de pozitia lor initiala, pentru a arata mai bine. */
+  position: relative;
+  top: var(--spacing-tiny);
 }
 
 .welcome .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    /* Vrem ca al nostru container sa ocupe tot spatiul disponibil. */
-    flex-grow: 1;
+  /* Vrem ca al nostru container sa ocupe tot spatiul disponibil. */
+  flex-grow: 1;
 }
 
 .welcome a {
-    color: var(--text-light);
-    background-color: var(--button-color);
+  color: var(--text-light);
+  background-color: var(--button-color);
 
-    font-size: var(--fs-medium);
-    text-transform: uppercase;
-    text-align: center;
+  font-size: var(--fs-medium);
+  text-transform: uppercase;
+  text-align: center;
 
-    padding: var(--spacing-medium);
-    border: 2px solid var(--button-color);
-    border-radius: 5px;
+  padding: var(--spacing-medium);
+  border: 2px solid var(--button-color);
+  border-radius: 5px;
 
-    width: 260px;
+  width: 260px;
 }
 
 .welcome a:hover {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {
-    .welcome h1 {
-        font-size: 2.5rem;
-    }
+  .welcome h1 {
+    font-size: 2.5rem;
+  }
 
-    /* Vrem ca ultimul paragraf sa nu aiba margine. */
-    .welcome p:last-of-type {
-        margin-bottom: 0;
-    }
+  /* Vrem ca ultimul paragraf sa nu aiba margine. */
+  .welcome p:last-of-type {
+    margin-bottom: 0;
+  }
 
-    .welcome img {
-        display: block;
-        
-        margin-top: var(--spacing-medium);
-        margin-left: var(--spacing-small);
-    }
+  .welcome img {
+    display: block;
 
-    .welcome a {
-        /* Asundem butonul pe mobil. */
-        display: none;
-    }
+    margin-top: var(--spacing-medium);
+    margin-left: var(--spacing-small);
+  }
 
-    .welcome {
-        padding-bottom: 4rem;
-    }
+  .welcome a {
+    /* Asundem butonul pe mobil. */
+    display: none;
+  }
 
+  .welcome {
+    padding-bottom: 4rem;
+  }
 }
 
 /* Couses section */
 .courses h2 {
-    margin: var(--spacing-large) 0;
-    text-align: center;
+  margin: var(--spacing-large) 0;
+  text-align: center;
 }
 
 /* Stilizarea se aplica doar pe un element care are IN ACELASI TIMP clasele container si grid. */
 .courses .container.grid {
-    padding: var(--spacing-medium) var(--spacing-small);
+  padding: var(--spacing-medium) var(--spacing-small);
 }
 
 .courses .courses-container {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-    margin-bottom: var(--spacing-large);
+  margin-bottom: var(--spacing-large);
 }
 
 .courses .course-wrapper {
-    width: calc(100% / 3);
+  width: calc(100% / 3);
 
-    padding-left: var(--spacing-small);
-    padding-right: var(--spacing-small);
+  padding-left: var(--spacing-small);
+  padding-right: var(--spacing-small);
 }
 
 .courses .course {
-    width: 100%;
+  width: 100%;
 
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: var(--spacing-tiny);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: var(--spacing-tiny);
 }
 
 .courses h3 {
-    color: var(--text-primary);
-    font-weight: 400;
+  color: var(--text-primary);
+  font-weight: 400;
 }
 
 .courses span {
-    font-size: var(--fs-medium);
-    color: var(--text-dark);
+  font-size: var(--fs-medium);
+  color: var(--text-dark);
 }
 
-.courses .material-icons {
-    /* Veritcal align aliniaza pe vertcala elementele inline. */
-    vertical-align: middle;
+.courses .material-symbols-outlined {
+  /* Veritcal align aliniaza pe vertcala elementele inline. */
+  vertical-align: middle;
 }
 
-.course .date, .courses .place {
-    padding: var(--spacing-tiny);
+.course .date,
+.courses .place {
+  padding: var(--spacing-tiny);
 }
 
 .courses .place {
-    background-color: var(--text-secondary);
-    margin-left: var(--spacing-tiny);
+  background-color: var(--text-secondary);
+  margin-left: var(--spacing-tiny);
 }
 
-.courses .course, .courses h3, .courses .badges {
-    margin-bottom: var(--spacing-medium);
+.courses .course,
+.courses h3,
+.courses .badges {
+  margin-bottom: var(--spacing-medium);
 }
 
 .courses .bar {
-    height: var(--spacing-tiny);
-    background-color: var(--button-color);
-    border-radius: 10px;
+  height: var(--spacing-tiny);
+  background-color: var(--button-color);
+  border-radius: 10px;
 }
 
 .courses .content {
-    padding: var(--spacing-medium) var(--spacing-small);
+  padding: var(--spacing-medium) var(--spacing-small);
 }
 
 @media (max-width: 992px) {
-    .courses .course-wrapper {
-        width: 50%;
-    }
+  .courses .course-wrapper {
+    width: 50%;
+  }
 }
 
 @media (max-width: 768px) {
-    .courses .course-wrapper {
-        width: 100%;
-    }
+  .courses .course-wrapper {
+    width: 100%;
+  }
 }
 
 /* Who we are section */
 .who-we-are {
-    background-color: var(--bg-secondary);
+  background-color: var(--bg-secondary);
 }
 
 .who-we-are .container.grid {
-    padding: var(--spacing-medium) var(--spacing-small);
+  padding: var(--spacing-medium) var(--spacing-small);
 }
 
 .who-we-are h2 {
-    padding-top: var(--spacing-large);
+  padding-top: var(--spacing-large);
 }
 
-.who-we-are h2, .who-we-are p {
-    margin-bottom: var(--spacing-large);
-    text-align: center;
+.who-we-are h2,
+.who-we-are p {
+  margin-bottom: var(--spacing-large);
+  text-align: center;
 }
 
 .who-we-are .container.grid p {
-    margin-right: var(--spacing-small);
-    margin-left: var(--spacing-small);
+  margin-right: var(--spacing-small);
+  margin-left: var(--spacing-small);
 }
 
 .who-we-are .images-container {
-    display: flex;
-    flex-wrap: wrap;
-    
-    margin-bottom: var(--spacing-large);
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-bottom: var(--spacing-large);
 }
 
 .who-we-are .image-wrapper {
-    width: calc(100% / 3);
+  width: calc(100% / 3);
 
-    padding-right: var(--spacing-small);
-    padding-left: var(--spacing-small);
-    margin-bottom: var(--spacing-medium);
+  padding-right: var(--spacing-small);
+  padding-left: var(--spacing-small);
+  margin-bottom: var(--spacing-medium);
 }
 
 .who-we-are img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 992px) {
-    .who-we-are .image-wrapper {
-        width: 50%;
-    }
+  .who-we-are .image-wrapper {
+    width: 50%;
+  }
 }
 
 @media (max-width: 768px) {
-    .who-we-are .image-wrapper {
-        width: 100%;
-    }
+  .who-we-are .image-wrapper {
+    width: 100%;
+  }
 }
 
 /* Partners section */
 .partners h2 {
-    padding-top: var(--spacing-large);
-    text-align: center;
+  padding-top: var(--spacing-large);
+  text-align: center;
 }
 
-.partners h2, .partners .partners-container {
-    margin-bottom: var(--spacing-large);
+.partners h2,
+.partners .partners-container {
+  margin-bottom: var(--spacing-large);
 }
 
 .partners .partners-container {
-    display: flex;
-    flex-wrap: wrap;
-    /* In cazul partenerilor, nu vrem ca imaginile sa se intinda pe tot randul, deci le spatiem cu justify-content: space-around. */
-    justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  /* In cazul partenerilor, nu vrem ca imaginile sa se intinda pe tot randul, deci le spatiem cu justify-content: space-around. */
+  justify-content: space-around;
 
-    margin: 0 var(--spacing-xl);
+  margin: 0 var(--spacing-xl);
 }
 
 .partners .image-wrapper {
-    width: 100px;
+  width: 100px;
 
-    margin-right: var(--spacing-xl);
-    margin-left: var(--spacing-xl);
-    margin-bottom: var(--spacing-medium);
+  margin-right: var(--spacing-xl);
+  margin-left: var(--spacing-xl);
+  margin-bottom: var(--spacing-medium);
 }
 
 .partners img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 
-    /* Facem pozele gri. */
-    filter: grayscale(100%);
+  /* Facem pozele gri. */
+  filter: grayscale(100%);
 }
 
 .partners img:hover {
-    /* La hover, coloram din nou pozele. */
-    filter: grayscale(0);
+  /* La hover, coloram din nou pozele. */
+  filter: grayscale(0);
 }
 
 @media (max-width: 768px) {
-    .partners .partners-container {
-        margin: 0 var(--spacing-small);
-    }
+  .partners .partners-container {
+    margin: 0 var(--spacing-small);
+  }
 }
 
 @media (max-width: 576px) {
-    .partners .image-wrapper {
-        margin-right: var(--spacing-medium);
-        margin-left: var(--spacing-medium);
-    }
+  .partners .image-wrapper {
+    margin-right: var(--spacing-medium);
+    margin-left: var(--spacing-medium);
+  }
 }
